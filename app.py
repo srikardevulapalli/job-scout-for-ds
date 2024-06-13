@@ -14,15 +14,20 @@ from langchain.load import dumps, loads
 from PyPDF2 import PdfReader
 from operator import itemgetter
 
+openai_api_key = os.getenv("OPENAI_API_KEY")
+langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
 
-# Set environment variables
+
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
-os.environ['LANGCHAIN_API_KEY'] = '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'
-os.environ['OPENAI_API_KEY'] = 'sk-proj-eCMNrVrEQT34WKvWzFFpT3BlbkFJo8aAS1QBhQ8HkV0gKJC7'
+os.environ['LANGCHAIN_API_KEY'] = langchain_api_key
+os.environ['OPENAI_API_KEY'] = openai_api_key
+
+# Initialize OpenAI client with the API key
+client = OpenAI(api_key=openai_api_key)
 
 # Initialize OpenAI client
-client = OpenAI(organization='org-Vmf8l03IqwdFZNUKdsQK4n9j')
+# client = OpenAI(organization='org-Vmf8l03IqwdFZNUKdsQK4n9j')
 
 #### INDEXING ####
 
