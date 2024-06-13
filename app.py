@@ -19,7 +19,7 @@ from operator import itemgetter
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ['LANGCHAIN_ENDPOINT'] = 'https://api.smith.langchain.com'
 os.environ['LANGCHAIN_API_KEY'] = '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'
-os.environ['OPENAI_API_KEY'] = 'sk-proj-oAizDblXxfg0Qgc2dvnbT3BlbkFJcvpUXWvHUJzIYPjeGG5p'
+os.environ['OPENAI_API_KEY'] = 'sk-proj-TbIZQNlReEyR62iDDzbDT3BlbkFJNcI3LOvUjwNduTUhSlzm'
 
 # Initialize OpenAI client
 client = OpenAI(organization='org-Vmf8l03IqwdFZNUKdsQK4n9j')
