@@ -223,13 +223,13 @@ def main():
             background-color: #138496;
         }
 
-        .stTextArea textarea, .stTextInput input, .stFileUploader input{
+        .stTextArea textarea, .stTextInput input, .stFileUploader input, .stFileUploader label{
             color: white;
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(0,0,0,1);
             border: 1px solid #ced4da;
         }
 
-        .stTextArea label, .stTextInput label, .stFileUploader label {
+        .stTextArea label, .stTextInput label {
             color: #FFFFFF;
             font-size: 20px;
             font-family: 'Poppins', sans-serif;
