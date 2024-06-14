@@ -228,7 +228,7 @@ def main():
         }
 
         .stTextArea label, .stTextInput label, .stFileUploader label {
-            color: #FFFFFF;
+            color: #000000;
             font-size: 20px;
             font-family: 'Poppins', sans-serif;
         }
@@ -282,11 +282,11 @@ def main():
 
     st.markdown("<h9 class='white-text'> </h9>", unsafe_allow_html=True)
     st.markdown("<h9 class='white-text'>Paste your resume text here or upload your resume</h9>", unsafe_allow_html=True)
-    resume_text = st.text_area(" ", height=100)
+    resume_text = st.text_area("📄", height=100)
     resume_file = st.file_uploader(" ", type="pdf")
     st.markdown("<h9 class='white-text'> </h9>", unsafe_allow_html=True)
     st.markdown("<h9 class='white-text'>Paste the job description here</h9>", unsafe_allow_html=True)
-    job_description = st.text_area(" ", height=100)
+    job_description = st.text_area("📃", height=100)
 
     # Example question prompts
     st.markdown("<h7 class='white-text'>Example Questions</h7>", unsafe_allow_html=True)
@@ -296,7 +296,7 @@ def main():
     st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
     st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
     st.markdown("<h9 class='white-text'>Ask a question about the job,resume or anything in general</h9>", unsafe_allow_html=True)
-    question = st.text_input(" ")
+    question = st.text_input("❔")
 
     if not resume_text and resume_file:
       resume_text = extract_text_from_pdf(resume_file)
