@@ -233,7 +233,7 @@ def main():
             font-family: 'Poppins', sans-serif;
         }
 
-        .stTextArea label, .stTextInput label, .stFileUploader label, .stMarkdown p {
+        .stMarkdown p {
             font-size: 20px;
             font-family: 'Poppins', sans-serif;
         }
