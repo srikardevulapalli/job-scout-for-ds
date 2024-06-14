@@ -225,6 +225,7 @@ def main():
 
         .stTextArea textarea, .stTextInput input, .stFileUploader input, .stFileUploader label{
             color: white;
+            opacity: 0;
             background-color: rgba(0,0,0,1);
             border: 1px solid #ced4da;
         }
@@ -280,7 +281,7 @@ def main():
 
 
     st.markdown('<div class="title">Job Scout for Data Science 📊👔</div>', unsafe_allow_html=True)
-    st.markdown("<p class='white-text'>This tool enhances resume and job description analysis by offering personalized advice through Retrieval-Augmented Generation (RAG). Users can input resumes (text or PDF) and job descriptions, choose from example questions, or enter custom queries. Leveraging a knowledge base of data science interview prep and curated resources, it delivers precise and contextual responses.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='white-text'>This tool enhances resume and job description analysis by offering personalized advice through Retrieval-Augmented Generation (RAG). Users can input resumes (text or PDF) and job descriptions, choose from example questions, or enter custom queries. Leveraging a knowledge base of data science interview prep material and curated resources, it delivers precise and contextual responses.</p>", unsafe_allow_html=True)
 
     st.markdown("<h9 class='white-text'> </h9>", unsafe_allow_html=True)
     st.markdown("<h9 class='white-text'>Paste your resume text here or upload your resume</h9>", unsafe_allow_html=True)
