@@ -223,18 +223,28 @@ def main():
             background-color: #138496;
         }
 
-        .stTextArea textarea, .stTextInput input, .stFileUploader input{
-            color: white;
-            background-color: transparent;
-            border: 1px solid #ced4da;
+        .stTextArea textarea, .stTextInput input, .stFileUploader input {
+            background: rgba(255, 255, 255, 0);
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .stTextArea label, .stTextInput label, .stFileUploader label {
             color: #FFFFFF;
-            font-size: 20px;
+            font-size: 18px;
             font-family: 'Poppins', sans-serif;
         }
 
+        .stTextArea textarea::placeholder, .stTextInput input::placeholder, .stFileUploader div::placeholder {
+            color: #ffffff;
+            opacity: 0.7;
+        }
+
+        .stTextArea textarea, .stTextInput input, .stFileUploader div {
+            caret-color: #ffffff;
+        }
         .stMarkdown p {
             font-size: 20px;
             font-family: 'Poppins', sans-serif;
