@@ -13,6 +13,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.load import dumps, loads
 from PyPDF2 import PdfReader
 from operator import itemgetter
+import time
 
 openai_api_key = os.getenv("OPENAI_API_KEY")
 langchain_api_key = os.getenv("LANGCHAIN_API_KEY")
