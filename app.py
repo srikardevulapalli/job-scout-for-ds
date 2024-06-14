@@ -224,6 +224,7 @@ def main():
         }
 
         .stTextArea textarea, .stTextInput input{
+            background-color: rgba(0, 0, 0, 0.5);
             border: 1px solid #ced4da;
         }
 
