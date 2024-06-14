@@ -235,13 +235,13 @@ def main():
         }
 
         .stTextArea label, .stTextInput label, .stFileUploader label, .stMarkdown p {
-            font-size: 20px;
+            font-size: 25px;
             font-family: 'Poppins', sans-serif;
         }
 
         .white-text {
             color: #FFFFFF;
-            font-size: 20px;
+            font-size: 17px;
             font-family: 'Poppins', sans-serif;
         }
 
