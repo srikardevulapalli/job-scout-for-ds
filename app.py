@@ -224,13 +224,13 @@ def main():
         }
 
         .stTextArea textarea, .stTextInput input{
-            background-color: #f8f9fa;
+            background-color: transparent;
             border: 1px solid #ced4da;
         }
 
         .stTextArea label, .stTextInput label, .stFileUploader label {
             color: #FFFFFF;
-            font-size: 18px;
+            font-size: 20px;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -269,7 +269,7 @@ def main():
     st.markdown(
         """
         <video autoplay muted loop class="background-video">
-            <source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1280_720_30fps.mp4" type="video/mp4">
+            <source src="https://cdn.pixabay.com/video/2022/12/28/144590-785095798_large.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
         """,
@@ -279,7 +279,7 @@ def main():
 
 
     st.markdown('<div class="title">Job Scout for Data Science 📊👔</div>', unsafe_allow_html=True)
-    st.markdown("<p class='white-text'>This interface is a tool designed to assist users in analyzing their resumes and job descriptions, providing personalized advice based on the content. Built on Retrieval-Augmented Generation (RAG), it leverages a combination of document retrieval and language model generation to offer contextual and informative replies. Users can input their resumes (text or PDF) and job descriptions, select from example questions, or type custom queries. Using LangChain, the application retrieves relevant information from a knowledge base consisting of data science interview prep material and curated resources stored in vector databases.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='white-text'>This tool enhances resume and job description analysis by offering personalized advice through Retrieval-Augmented Generation (RAG). Users can input resumes (text or PDF) and job descriptions, choose from example questions, or enter custom queries. Leveraging a knowledge base of data science interview prep and curated resources, it delivers precise and contextual responses.</p>", unsafe_allow_html=True)
 
     resume_text = st.text_area("Paste your resume text here or upload your resume", height=100)
     resume_file = st.file_uploader(" ", type="pdf")
