@@ -224,7 +224,6 @@ def main():
         }
 
         .stTextArea textarea, .stTextInput input{
-            background-color: transparent;
             border: 1px solid #ced4da;
         }
 
@@ -235,7 +234,7 @@ def main():
         }
 
         .stTextArea label, .stTextInput label, .stFileUploader label, .stMarkdown p {
-            font-size: 25px;
+            font-size: 20px;
             font-family: 'Poppins', sans-serif;
         }
 
@@ -281,9 +280,13 @@ def main():
     st.markdown('<div class="title">Job Scout for Data Science 📊👔</div>', unsafe_allow_html=True)
     st.markdown("<p class='white-text'>This tool enhances resume and job description analysis by offering personalized advice through Retrieval-Augmented Generation (RAG). Users can input resumes (text or PDF) and job descriptions, choose from example questions, or enter custom queries. Leveraging a knowledge base of data science interview prep and curated resources, it delivers precise and contextual responses.</p>", unsafe_allow_html=True)
 
-    resume_text = st.text_area("Paste your resume text here or upload your resume", height=100)
+    st.markdown("<h9 class='white-text'> </h9>", unsafe_allow_html=True)
+    st.markdown("<h9 class='white-text'>Paste your resume text here or upload your resume</h9>", unsafe_allow_html=True)
+    resume_text = st.text_area(" ", height=100)
     resume_file = st.file_uploader(" ", type="pdf")
-    job_description = st.text_area("Paste the job description here", height=100)
+    st.markdown("<h9 class='white-text'> </h9>", unsafe_allow_html=True)
+    st.markdown("<h9 class='white-text'>Paste the job description here</h9>", unsafe_allow_html=True)
+    job_description = st.text_area(" ", height=100)
 
     # Example question prompts
     st.markdown("<h7 class='white-text'>Example Questions</h7>", unsafe_allow_html=True)
@@ -292,7 +295,8 @@ def main():
     st.markdown("<div class='white-text'>Example 3: What are the key points to include in a cover letter?</div>", unsafe_allow_html=True)
     st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
     st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
-    question = st.text_input("Ask a question about the job,resume or anything in general")
+    st.markdown("<h9 class='white-text'>Ask a question about the job,resume or anything in general</h9>", unsafe_allow_html=True)
+    question = st.text_input(" ")
 
     if not resume_text and resume_file:
       resume_text = extract_text_from_pdf(resume_file)
