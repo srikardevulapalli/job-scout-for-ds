@@ -176,7 +176,7 @@ def main():
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Poppins:wght@500&display=swap');
         
         .main {
-            background-image: url('https://img.freepik.com/free-photo/futuristic-sci-fi-space-tunnel-passageway-with-glowing-shiny-lights_181624-17286.jpg?t=st=1718338366~exp=1718341966~hmac=b404f9bb6e0b81ab5375cad5f7b7b9aaf6a42751c16e912f7a558c7b3dbe42a7&w=1380');
+            background-image: url('https://www.example.com/background-image.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -205,6 +205,10 @@ def main():
         }
         
         .stTextArea label, .stTextInput label {
+            color: #FFFFFF;
+        }
+        
+        .white-text {
             color: #FFFFFF;
         }
         
