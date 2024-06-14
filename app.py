@@ -225,7 +225,7 @@ def main():
 
         .stTextArea textarea, .stTextInput input, .stFileUploader input{
             color: white;
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgba(0,0,0,0.7);
             border: 1px solid #ced4da;
         }
 
