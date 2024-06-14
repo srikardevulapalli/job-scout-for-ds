@@ -174,14 +174,38 @@ def main():
         """
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Poppins:wght@500&display=swap');
-        
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
         .main {
-            background-image: url('https://media2.giphy.com/media/7VzgMsB6FLCilwS30v/200w.gif?cid=6c09b9529st5vc457nhzfza0b81m4xleb2j1cs22ixm6qo9u&ep=v1_gifs_search&rid=200w.gif&ct=g');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            position: relative;
+            z-index: 1;
             color: #FFFFFF;
         }
+
         .stButton>button {
             color: white;
             background-color: #17a2b8;
@@ -198,28 +222,36 @@ def main():
         .stButton>button:hover {
             background-color: #138496;
         }
-        
-        .stTextArea textarea, .stTextInput input {
+
+        .stTextArea textarea, .stTextInput input{
             background-color: #f8f9fa;
             border: 1px solid #ced4da;
         }
-        
-        .stTextArea label, .stTextInput label {
+
+        .stTextArea label, .stTextInput label, .stFileUploader label {
             color: #FFFFFF;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
         }
-        
+
+        .stTextArea label, .stTextInput label, .stFileUploader label, .stMarkdown p {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
         .white-text {
             color: #FFFFFF;
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
         }
-        
+
         footer {
             font-size: 18px;
             text-align: center;
             padding: 10px;
-            background-color: #17a2b8;
             color: white;
         }
-        
+
         .title {
             font-family: 'Poppins', sans-serif;
             font-size: 48px;
@@ -233,20 +265,33 @@ def main():
         unsafe_allow_html=True,
     )
 
-    st.markdown('<div class="title">🔍 Job Scout for Data Science</div>', unsafe_allow_html=True)
+    # Embed background video and overlay
+    st.markdown(
+        """
+        <video autoplay muted loop class="background-video">
+            <source src="https://videos.pexels.com/video-files/3130284/3130284-hd_1280_720_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.markdown("This interface is a tool designed to assist users in analyzing their resumes and job descriptions, providing personalized advice based on the content. Built on Retrieval-Augmented Generation (RAG), it leverages a combination of document retrieval and language model generation to offer contextual and informative replies. Users can input their resumes (text or PDF) and job descriptions, select from example questions, or type custom queries. Using LangChain, the application retrieves relevant information from a knowledge base consisting of data science interview prep material and curated resources stored in vector databases.")
 
-    resume_text = st.text_area("Paste your resume text here", height=200)
-    resume_file = st.file_uploader("Or upload your resume (PDF)", type="pdf")
-    job_description = st.text_area("Paste the job description here", height=200)
+
+    st.markdown('<div class="title">Job Scout for Data Science 📊👔</div>', unsafe_allow_html=True)
+    st.markdown("<p class='white-text'>This interface is a tool designed to assist users in analyzing their resumes and job descriptions, providing personalized advice based on the content. Built on Retrieval-Augmented Generation (RAG), it leverages a combination of document retrieval and language model generation to offer contextual and informative replies. Users can input their resumes (text or PDF) and job descriptions, select from example questions, or type custom queries. Using LangChain, the application retrieves relevant information from a knowledge base consisting of data science interview prep material and curated resources stored in vector databases.</p>", unsafe_allow_html=True)
+
+    resume_text = st.text_area("Paste your resume text here or upload your resume", height=100)
+    resume_file = st.file_uploader(" ", type="pdf")
+    job_description = st.text_area("Paste the job description here", height=100)
 
     # Example question prompts
-    st.markdown("##### Example Questions", unsafe_allow_html=True)
-    st.markdown("Example 1: Am I a good fit for this job?")
-    st.markdown("Example 2: Play the devil's advocate and identify what is missing in my resume for this role")
-    st.markdown("Example 3: What are the key points to include in a cover letter?")
-    
+    st.markdown("<h7 class='white-text'>Example Questions</h7>", unsafe_allow_html=True)
+    st.markdown("<div class='white-text'>Example 1: Am I a good fit for this job?</div>", unsafe_allow_html=True)
+    st.markdown("<div class='white-text'>Example 2: Play the devil's advocate and identify what is missing in my resume for this role</div>", unsafe_allow_html=True)
+    st.markdown("<div class='white-text'>Example 3: What are the key points to include in a cover letter?</div>", unsafe_allow_html=True)
+    st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
+    st.markdown("<div class='white-text'> </div>", unsafe_allow_html=True)
     question = st.text_input("Ask a question about the job,resume or anything in general")
 
     if not resume_text and resume_file:
@@ -331,7 +376,11 @@ def main():
         st.write("Response:")
         st.write(response)
 
-    st.markdown("<div class='white-text'>##### Developed by Srikar Devulapalli</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<footer>Developed by Srikar Devulapalli</footer>",
+        unsafe_allow_html=True
+    )
+
 
 if __name__ == "__main__":
     main()
