@@ -299,6 +299,9 @@ def main():
     if resume_text and job_description:
       con="Based on my resume :"+resume_text + "\n\n" + "And the job description: "+job_description
       question=con+", Answer this question in detail: "+question
+    elif resume_text and not job_description:
+        con="Based on my resume :"+resume_text
+        question=con+", Answer this question in detail: "+question
     else:
       question="Answer this question in detail: "+question
     # Decomposition
