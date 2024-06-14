@@ -176,7 +176,7 @@ def main():
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Poppins:wght@500&display=swap');
         
         .main {
-            background-image: url('https://www.example.com/background-image.jpg');
+            background-image: url('https://media2.giphy.com/media/7VzgMsB6FLCilwS30v/200w.gif?cid=6c09b9529st5vc457nhzfza0b81m4xleb2j1cs22ixm6qo9u&ep=v1_gifs_search&rid=200w.gif&ct=g');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -242,7 +242,7 @@ def main():
     job_description = st.text_area("Paste the job description here", height=200)
 
     # Example question prompts
-    st.markdown("##### Example Questions")
+    st.markdown("##### Example Questions", unsafe_allow_html=True)
     st.markdown("Example 1: Am I a good fit for this job?")
     st.markdown("Example 2: Play the devil's advocate and identify what is missing in my resume for this role")
     st.markdown("Example 3: What are the key points to include in a cover letter?")
@@ -331,7 +331,7 @@ def main():
         st.write("Response:")
         st.write(response)
 
-    st.markdown("##### Developed by Srikar Devulapalli")
+    st.markdown("<div class='white-text'>##### Developed by Srikar Devulapalli</div>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
