@@ -27,8 +27,6 @@ os.environ['OPENAI_API_KEY'] = openai_api_key
 # Initialize OpenAI client with the API key
 client = OpenAI(api_key=openai_api_key)
 
-# Initialize OpenAI client
-# client = OpenAI(organization='org-Vmf8l03IqwdFZNUKdsQK4n9j')
 
 #### INDEXING ####
 
