@@ -3,6 +3,7 @@
 ### Job Scout for Data Science :brain: :briefcase: :bar_chart:	
 
 https://job-scout-for-data-science-fed899ff89d5.herokuapp.com/
+
 <font color="red"> The current URL may stop working after the token limit is reached. Running the application on your local machine with your own API keys is recommended. Make sure to monitor your token usage and regenerate keys or update limits as needed. </font>
 
 
