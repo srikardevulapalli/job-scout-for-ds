@@ -16,3 +16,20 @@ Job Scout for Data Science is a tool designed to help users analyze their resume
 - Custom Queries: Select from example questions or type custom queries related to resumes, job descriptions, or general career advice.
 - Knowledge Base: Utilizes a curated database of data science interview prep materials and resources.
 
+#### Installation
+Follow these steps to run the Streamlit app on your local machine:
+
+##### Prerequisites
+Ensure you have the following installed:
+- Python 3.8 or higher
+- pip (Python package installer)
+
+##### Steps
+1. Clone the Repository:
+```
+   git clone https://github.com/srikardevulapalli/job-scout-for-ds.git
+   cd job-scout-for-ds
+```
+
+
+
